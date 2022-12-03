@@ -10,15 +10,13 @@ public class PitestDemo {
     }
 
     public static boolean isIsogram(String input) {
-        String[] ary = input.split("");
-        Set<String> mySet = new HashSet<>(Arrays.asList(ary));
-        return input.length() == mySet.size();
+        String[] splitString = input.split("");
+        Set<String> set = new HashSet<>(Arrays.asList(splitString));
+        return input.length() == set.size();
     }
 
     public static boolean isWithinRange(int number) {
-        int max = 100;
-        int min = 10;
-        return number <= max && number >= min;
+        return number <= 100 && number >= 10;
     }
 
 }

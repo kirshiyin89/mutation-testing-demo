@@ -13,3 +13,9 @@ blocks:
             - checkout
             - sem-version java 11
             - mvn -B package --file pom.xml
+  - name: Test
+    task:
+      jobs:
+        - name: Test
+          commands:
+            - mvn test

@@ -18,4 +18,5 @@ blocks:
       jobs:
         - name: Test
           commands:
+            - checkout
             - mvn test

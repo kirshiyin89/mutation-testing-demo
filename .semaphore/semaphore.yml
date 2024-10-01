@@ -30,4 +30,4 @@ blocks:
             - sudo chmod 777 -R /usr/local/bin/
             - mv ./snyk /usr/local/bin/
             - echo $SNYK_TOKEN
-            - SNYK_TOKEN=$SNYK_TOKEN snyk test
+            - SNYK_TOKEN=1ce84c80-9a60-4aef-a806-799636802ed1 snyk test

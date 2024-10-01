@@ -20,3 +20,11 @@ blocks:
           commands:
             - checkout
             - mvn test
+  - name: Security Scan
+    task:
+      jobs:
+        - name: Security Scan
+          commands:
+            - 'curl -sL https://snyk.io/install | bash'
+            - snyk auth $SNYK_TOKEN
+            - snyk test

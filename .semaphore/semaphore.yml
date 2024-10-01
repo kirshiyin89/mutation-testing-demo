@@ -10,8 +10,9 @@ blocks:
       jobs:
         - name: Display Current Directory
           commands:
-            - pwd  # Display the current directory
-            - ls -l  # List all files and directories
+            - pwd
+            - ls -lart
+            - tree
   - name: Maven
     task:
       jobs:

@@ -10,9 +10,7 @@ blocks:
       jobs:
         - name: Display Current Directory
           commands:
-            - pwd
-            - ls -lart
-            - tree
+            - find / -name "pom.xml"
   - name: Maven
     task:
       jobs:

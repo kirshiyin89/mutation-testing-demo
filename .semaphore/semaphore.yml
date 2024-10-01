@@ -32,8 +32,9 @@ blocks:
             - sudo chmod 777 -R /usr/local/bin/
             - mv ./snyk /usr/local/bin/
             - pwd
+            - ls semaphore
             - ls
             - cd ../
-            - cd ./
+            - cd ../
             - ls
             - SNYK_TOKEN=$SNYK_TOKEN snyk test

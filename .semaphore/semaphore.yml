@@ -27,9 +27,10 @@ blocks:
       jobs:
         - name: Security Scan
           commands:
-            - curl --compressed https://downloads.snyk.io/cli/stable/snyk-linux -o snyk
+            - 'curl --compressed https://downloads.snyk.io/cli/stable/snyk-linux -o snyk'
             - chmod +x ./snyk
             - sudo chmod 777 -R /usr/local/bin/
             - mv ./snyk /usr/local/bin/
             - cd ../
+            - ls
             - SNYK_TOKEN=$SNYK_TOKEN snyk test

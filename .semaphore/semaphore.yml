@@ -5,6 +5,13 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
+  - name: Check Current Directory
+    task:
+      jobs:
+        - name: Display Current Directory
+          commands:
+            - pwd  # Display the current directory
+            - ls -l  # List all files and directories
   - name: Maven
     task:
       jobs:

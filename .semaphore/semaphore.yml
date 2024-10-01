@@ -10,16 +10,15 @@ blocks:
       jobs:
         - name: Build
           commands:
+            - checkout
             - sem-version java 11
             - mvn -B package --file pom.xml
-      prologue:
-        commands:
-          - checkout
   - name: Test
     task:
       jobs:
         - name: Test
           commands:
+            - checkout
             - mvn test
   - name: Security Scan
     task:
@@ -28,6 +27,7 @@ blocks:
       jobs:
         - name: Security Scan
           commands:
+            - checkout
             - 'curl --compressed https://downloads.snyk.io/cli/stable/snyk-linux -o snyk'
             - chmod +x ./snyk
             - sudo chmod 777 -R /usr/local/bin/

@@ -5,12 +5,6 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: Check Current Directory
-    task:
-      jobs:
-        - name: Display Current Directory
-          commands:
-            - find / -name "pom.xml"
   - name: Maven
     task:
       jobs:
@@ -33,9 +27,7 @@ blocks:
       jobs:
         - name: Security Scan
           commands:
-            - cd /home/semaphore/build
-            - ls -l
-            - pwd
+            - checkout
             - 'curl --compressed https://downloads.snyk.io/cli/stable/snyk-linux -o snyk'
             - chmod +x ./snyk
             - sudo chmod 777 -R /usr/local/bin/

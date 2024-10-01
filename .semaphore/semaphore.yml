@@ -29,5 +29,5 @@ blocks:
             - chmod +x ./snyk
             - sudo chmod 777 -R /usr/local/bin/
             - mv ./snyk /usr/local/bin/
-            - export SNYK_TOKEN=$SNYK_TOKEN
-            - snyk test
+            - echo $SNYK_TOKEN
+            - SNYK_TOKEN=$SNYK_TOKEN snyk test
